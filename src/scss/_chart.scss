@@ -1,0 +1,154 @@
+.chart-item{
+  float: left;
+  width: 50%;
+  padding-top: 65%;
+  position: relative;
+  overflow: hidden;  
+  .chart-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    @include transition(all 0.6s ease);
+  }
+  .chart-con:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-size: 100%;
+  }
+  &.show .chart-con{
+    opacity: 1;
+  }
+  $hdHeight: 65px;
+  //hd
+  .hd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $hdHeight;
+    overflow: hidden;
+  }
+  .hd .chart-title{
+    padding: 10px;
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .chart-title .total{
+    margin-bottom: 10px;
+    height: 14px;
+    overflow: hidden;
+  }
+  .chart-title span{
+    display: inline-block;
+  }
+  .chart-title .total .num{
+    margin-right: 10px;
+  }
+  .chart-title .total .num:after{
+    content: '';
+    display: inline-block;
+    position: relative;
+    margin-left: 6px;
+    top: 1px;
+    //icon
+    $data-on-group: ('icon-data-on', $icon-data-on, $icon-data-on-2x);
+    @include retina-sprite($data-on-group);
+  }
+  .chart-title .total.data-off .num:after{
+    //icon
+    $data-off-group: ('icon-data-off', $icon-data-off, $icon-data-off-2x);
+    @include retina-sprite($data-off-group);
+  }
+  .chart-title .percent .num{
+    font-size: 26px;
+    margin-right: 8px;
+  }
+  .chart-title .percent .trend{
+    position: relative;
+    padding-left: 14px;
+    color: #B0AEB6;
+    top: -10px;
+  }
+  .chart-title .percent .trend:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    //icon
+    $arrow-circle-group: ('icon-arrow-circle', $icon-arrow-circle, $icon-arrow-circle-2x);
+    @include retina-sprite($arrow-circle-group);
+  }
+  .chart-title .percent .trend.down:before{
+    //icon
+    $icon-arrow-circle-down-group: ('icon-arrow-circle-down', $icon-arrow-circle-down, $icon-arrow-circle-down-2x);
+    @include retina-sprite($icon-arrow-circle-down-group);
+  }
+
+  //bd
+  .bd{
+    position: absolute;
+    top: $hdHeight;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+//column-double 双柱状+折线混合图
+.column-double{
+  clear: both;
+  width: 100%;
+  margin-bottom: -18px;
+  .chart-con:before{
+    background: url(../img/chart-bg1.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  //
+  .hd .chart-pie{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 110px;
+    height: 60px;
+  }
+}
+
+//chart-half
+.chart-half{
+  position: relative;
+  .chart-con:before{
+    // background: #FFF;
+    background: url(../img/chart-bg2.png) no-repeat center bottom;
+    background-size: 100%;
+    @include transform(scaleX(-1));
+  }
+  &.right{
+    margin-right: -2px;
+    margin-left: 2px;
+  }
+  &.right .chart-con:before{
+    @include transform(scaleX(1));
+  }
+  //hd
+  .hd .chart-title{
+    padding-right: 0;  
+  }
+}
+
+
+
+
+
+
+
+

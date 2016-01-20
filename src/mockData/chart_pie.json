@@ -1,0 +1,54 @@
+{
+  "status": 1,
+  "data": {
+    "panel_id": 1485,
+    "is_today": 0,
+    "chart_type": "pie",
+    "chart_name": "UV",
+    "is_not_core": "1",
+    "data": [
+      [
+        {
+          "value": "2745318",
+          "name": "\u534e\u4e3a\uff08HUAWEI\uff09"
+        },
+        {
+          "value": "2593644",
+          "name": "APPLE"
+        },
+        {
+          "value": "2256617",
+          "name": "\u5c0f\u7c73\uff08MI\uff09"
+        },
+        {
+          "value": "1618124",
+          "name": "\u4e09\u661f\uff08SAMSUNG\uff09"
+        },
+        {
+          "value": "1415926",
+          "name": "\u7f8e\u7684\uff08Midea\uff09"
+        },
+        {
+          "value": "1146310",
+          "name": "\u98de\u5229\u6d66\uff08PHILIPS\uff09"
+        },
+        {
+          "value": "989919",
+          "name": "\u672a\u77e5"
+        },
+        {
+          "value": "960423",
+          "name": "\u9b45\u65cf\uff08MEIZU\uff09"
+        },
+        {
+          "value": "955013",
+          "name": "\u96c0\u5de2\uff08Nestle\uff09"
+        },
+        {
+          "value": "918349",
+          "name": "\u4e50\u89c6\uff08Letv\uff09"
+        }
+      ]
+    ]
+  }
+}

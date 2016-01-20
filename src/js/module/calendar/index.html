@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>jdMobi-calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../../css/jdMobi.css"/>
+  <link rel="stylesheet" href="index.css"/>
+  <style>
+  .test_calendar{font-size: 16px; margin: 20px;}
+  .test_calendar .title{font-weight: bold;}
+  .test_calendar .date{border: 1px solid #ccc; display: inline-block; padding: 5px; width: 60%; text-indent: 5px;}
+  </style>
+</head>
+<body>
+  <!--外层容器-->
+  <div class="jdui_wrap">
+    <header class="jdui_header_bar" data-tml-url="header.tml.html">
+      <a href="javascript:;" class="jdui_header_btn">
+        <span class="jdui_icon jdui_icon_back"></span>
+      </a>
+      <a href="javascript:;" class="jdui_header_btn">
+        <span class="jdui_icon jdui_icon_moreandroid"></span>
+      </a>
+      <h1 class="jdui_header_title">calendar</h1>
+    </header>
+    <!--内容-->
+    <div class="jdui_content">
+      <div class="jdui_panel jdui_panel_inset">
+        <!-- test_calendar -->
+        <div class="test_calendar">
+          <span class="title">选择日期：</span>
+          <span id="J_dateStartPicker" class="date">2015-6-20</span>
+        </div>
+        <div class="test_calendar">
+          <span class="title">结束日期：</span>
+          <span id="J_dateEndPicker" class="date">2015-6-25</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- calendar -->
+  <!-- <div id="J_calendar" class="jdui_calendar">
+    <div class="jdui_calendar_hd">
+      <span class="jdui_calendar_title">选择日期</span>
+      <span class="jdui_calendar_close">取消</span>
+    </div>
+    <div class="jdui_calendar_bd"></div>
+  </div> -->
+
+  <!-- script -->
+  <script src="../../js/require.js"></script>
+  <script>
+    require.config({
+        baseUrl:"./../../",
+        paths: {
+            zepto: 'js/zepto.min',
+            calendar: 'component/calendar/index'
+        },
+        shim: {
+            'zepto': {
+                exports: '$'
+            }
+        }
+    });
+    require(['zepto', 'calendar'], function ($, calendar) {
+        var demo = {
+            init: function () {
+                var me = this;
+                //config
+                $('#J_dateStartPicker').calendar({
+                  selectDate: $('#J_dateStartPicker').text(),
+                  // startDate: new Date(2015,3)
+                  selecteCallback: function(str){
+                    console.log(str);
+                  }
+                });
+                $('#J_dateEndPicker').calendar({
+                  selectDate: $('#J_dateEndPicker').text(),
+                  title: '结束日期'
+                  // startDate: new Date(2015,3)
+                });
+                //event
+                me.bindHandler();
+            },
+            bindHandler: function () {
+                var me = this;
+                $('#J_dateStartPicker').on('selectedDate', function(e, str){
+                  console.log('event',str);
+                });
+            }
+        }
+        //init
+        demo.init();
+    });
+</script>
+
+</body>
+</html>

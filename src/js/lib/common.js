@@ -1,0 +1,3 @@
+require(['highcharts'], function(Highcharts) {
+    
+});

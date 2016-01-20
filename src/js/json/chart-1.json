@@ -1,0 +1,14 @@
+{
+  "status": 1,
+  "data": {
+    "panel_id": 0,
+    "is_today": 0,
+    "chart_type": "high",
+    "chart_name": "test1",
+    "is_not_core": "1",
+    "data": [{
+      "num": "954204445",
+      "rate": "0.0414"
+    }]
+  }
+}

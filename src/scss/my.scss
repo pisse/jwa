@@ -1,0 +1,236 @@
+@import "base";
+ul,li,dl,dt,dd{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+.my_index{
+	top:0;
+}
+.my_nav{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 120px;
+	padding-top: 60px;
+	background: #2E333D url(../img/my_ban_bg.png) left top no-repeat;
+	background-size: 100% 100%;
+	li{
+		width: 32%;
+		display: inline-block;
+		text-align: center;
+		& a{
+			display: block;
+		}
+		& a::before{
+			content: '';
+			display: block;
+			margin: 15px auto;
+			width: 46px;
+			height: 45px;
+			background: url(../img/sprite/my_icon@2x.png) left top no-repeat;
+			background-size:auto 100%;
+		}
+		&:nth-of-type(2) a::before{
+			background-position: -61px 0;
+		}
+		&:nth-of-type(3) a::before{
+			background-position: -119px 0;
+		}
+	}
+}
+.my_tab{
+	position: fixed;
+	top:180px;
+	z-index: 1;
+	width: 100%;
+	height: 40px;
+	padding-top:20px;
+	background: #343b4a;
+	li{
+		width: 50%;
+		height: 33px;
+		line-height: 33px;
+		position: relative;
+		text-align: center;
+		box-sizing:border-box;
+		float: left;
+		color:#4c5f6e;
+		&:nth-of-type(2){
+			border-left:1px solid #35444e;
+		}
+		&.cur{
+			color: #FFF;
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -7px;
+				width: 100%;
+				height: 8px;
+				background: url(../img/my_tab_cur.png) left bottom repeat-x;
+				background-size:auto 8px; 
+			}
+		}
+	}
+}
+.my_index_list_wrap{
+	width: 200%;
+	@include calc(height,"100% - 240px");
+	margin-top: 240px;
+	@include transform(translateX(0));
+	@include transition(all .5s);
+	overflow: hidden;
+	&.my_page2{
+		@include transform(translateX(-50%));
+	}
+}
+.my_index_list{
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	overflow-y: scroll;
+	ul{
+		position: relative;
+		min-height: 60px;
+	}
+	ul:first-child{
+		min-height: 100%;
+	}
+	.loading-pop.s-loading-list{
+		top: 10px;
+	}
+
+	.my_index_list_tin{
+		position: relative;
+		height: 75px;
+		box-sizing:border-box;
+		padding:5px 0 0 10px;
+		margin: 0 5px;
+		line-height: 30px;
+		color:#4c5f6e;
+		border-bottom:1px solid #35444e;
+		@include transition(height .5s,padding-top .5s);
+		overflow: hidden;
+		&.pre_disapear{
+			height: 0;
+			padding-top: 0;
+		}
+		.item{
+			display: block;
+		}
+		dl{
+			position: relative;
+			@include transform(translateX(0))
+			@include transition(all .5s);
+			.my_list_date{
+				position: absolute;
+				top:0;
+				right:5px;
+				height: 30px;
+				line-height: 30px;
+			}
+		}
+		dt{
+			height: 30px;
+			font-size:16px;
+			color: #FFF;
+		}
+		dd{
+			height: 30px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow:ellipsis;
+			padding-bottom: 10px;
+			p{
+				height: 30px;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    padding-bottom: 10px;
+			}
+		}
+		&.unread dt::before{
+			content:'';
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			margin: 10px 0 0  -10px;
+			background: #f3465a;
+			border-radius: 100%;
+		}
+		.option{
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform:translateX(155px);
+			height: 100%;
+			overflow: hidden;
+			background: #343b4a;
+			text-align: center;
+			font-size: 16px;
+			transition: transform .5s,height 0s ease .5s;
+			.o_read{
+				display: inline-block;
+				width: 80px;
+				padding-top: 40px;
+				height: 100%;
+				box-sizing:border-box;
+				position: relative;
+				float: left;
+				&::before{
+					content: '';
+					position: absolute;
+					top: 15px;
+					left: 50%;
+					@include transform(translateX(-50%));
+					width: 24px;
+					height: 24px;
+					background: url(../img/sprite/option@2x.png) center top no-repeat;
+					background-size: 100% auto;
+				}
+			}
+			.o_del{
+				display: inline-block;
+				width: 70px;
+				padding-top: 40px;
+				height: 100%;
+				color: #FFF;
+				background: #f3465a;
+				box-sizing:border-box;
+				position: relative;
+				float: left;
+				&::before{
+					content: '';
+					position: absolute;
+					top: 15px;
+					left: 50%;
+					@include transform(translateX(-50%));
+					width: 24px;
+					height: 24px;
+					background: url(../img/sprite/option@2x.png) center -30px no-repeat;
+					background-size: 100% auto;
+				}
+			}
+		}
+		&.translation{
+			dl{
+				@include transform(translateX(-150px));
+			}
+			.option{
+				transform: translateX(5px);
+				transition:transform .5s;
+			}
+			
+		}
+
+		
+	}
+}
+

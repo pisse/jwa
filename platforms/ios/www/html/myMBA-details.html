@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+  <title>我的MBA - 详情</title>
+  <link rel="stylesheet" href="../css/myMBA.css?t=1449128160476">
+</head>
+<body>
+  <div id="J_myMBADetails" class="container mymba-details">
+    <!-- header/navbar dynamic load -->
+
+    <!--S content -->
+    <div class="content hide">
+      <div class="tabbar filter-day filter-online">
+        <ul>
+          <li class="cur">今天</li>
+          <li>最近7天</li>
+          <li>最近30天</li>
+          <li id="J_customDay">自定义</li>
+        </ul>
+      </div>
+      <div id="J_chartDetails" class="chart-details">
+        <div class="details-hd">
+          <ul>
+            <li class="total">8.123,560</li>
+            <li class="date">
+              <em class="num">1,560</em>
+              <em class="time">08:00-09:00</em>
+            </li>
+            <!-- <li class="date">2015-10-22</li> -->
+            <li class="data-up">同比: <em class="num">12.03%</em></li>
+            <li class="data-down">环比: <em class="num">12.03%</em></li>
+          </ul>
+        </div>
+        <div class="details-bd">
+          
+        </div>
+        <div class="chart-data">
+          <h4>
+            <span class="title">日期</span>
+            <span class="num">DAU</span>
+          </h4>
+          <ul class="data-list">
+            <li>
+              <span class="title">汇总</span>
+              <span class="num">8,123,560</span>
+            </li>
+            <li>
+              <span class="title">平均</span>
+              <span class="num">8,123,560</span>
+            </li>
+            <li>
+              <span class="title">00:00-01:00</span>
+              <span class="num">8,123,560</span>
+            </li>
+            <li>
+              <span class="title">01:00-02:00</span>
+              <span class="num">8,123,560</span>
+            </li>
+            <li>
+              <span class="title">03:00-04:00</span>
+              <span class="num">8,123,560</span>
+            </li>
+            <li>
+              <span class="title">03:00-04:00</span>
+              <span class="num">8,123,560</span>
+            </li>
+            <li>
+              <span class="title">03:00-04:00</span>
+              <span class="num">8,123,560</span>
+            </li>
+          </ul>  
+        </div>
+        
+      </div>
+    </div>
+    <!--E content -->
+  </div>
+
+
+  <!--S filter -->
+  <div class="overlay"></div>
+  <div id="J_filter" class="filter">
+    <!-- S -part-main -->
+    <div class="part part-main">
+      <div class="hd">
+        <a class="btn btn-cancel" href="javascript:void(0);">返回</a>
+        <a class="btn btn-blue btn-submit" href="javascript:void(0);">确定</a>
+        <span class="title">筛选</span>
+      </div>
+      <div class="bd">
+        <div class="cate">无线类型</div>
+        <dl class="list-extend">
+          <dt class="all">全部<em class="line"></em></dt>
+          <dt class="selected sublist-txt extend">
+            <span class="txt">APP</span>
+            <span class="subtxt">
+              <em>(</em>
+              <em class="info">全部</em>
+              <em>)</em>
+              <em class="arrow"></em>
+            </span>
+            <em class="line"></em>
+          </dt>
+          <dd class="show">
+            <ul>
+              <li class="all selected">全部</li>
+              <li class="selected sublist-txt" data-sub="partlist-iphone">
+                <span class="txt">iphone</span>
+                <span class="subtxt">
+                  <em>(</em>
+                  <em class="info">全部</em>
+                  <em>)</em>
+                </span>
+                <em class="arrow"></em>
+              </li>
+              <li class="selected">Android</li>
+              <li class="selected">WP</li>
+              <li class="selected">其他</li>
+            </ul>
+          </dd>
+          <dt>M版<em class="line"></em></dt>
+        </dl>
+        <div class="cate">全网新老</div>
+        <dl class="list-extend list-select">
+          <dt class="all selected">全部<em class="line"></em></dt>
+          <dt>全网新用户<em class="line"></em></dt>
+          <dt>全网老用户<em class="line"></em></dt>
+        </dl>
+      </div>
+    </div>
+    <!-- E part-main -->
+    <!-- S part-iphone -->
+    <div class="part part-sub partlist-iphone">
+      <div class="hd">
+        <a class="btn btn-cancel" href="javascript:void(0);">取消</a>
+        <a class="btn btn-blue btn-submit" href="javascript:void(0);">确定</a>
+        <span class="title">版本选择</span>
+      </div>
+      <div class="bd">
+        <ul class="list-select-muti">
+          <li class="all selected">全部</li>
+          <li class="selected">
+            <em class="txt">v4.1</em>
+            <em class="more">(pc端已订阅：v4.1.1;v4.1.1;v4.1.1;v4.1.1;v4.1.1;)</em>
+          </li>
+          <li class="selected">v4.2</li>
+          <li class="selected">
+            <em class="txt">v4.3</em>
+            <em class="more">(pc端已订阅：v4.3.1;v4.3.1;v4.3.1;v4.3.1;v4.3.1;)</em>
+          </li>
+          <li class="selected">v4.4</li>
+          <li class="selected">v4.5</li>
+        </ul>
+      </div>
+    </div>
+    <!-- E part-iphone -->
+  </div>
+  <!--E filter -->
+
+<!-- build:js -->
+<script src="../js/lib/require.js "></script>
+<script  src="../js/myMBA-details.js?t=1449128160476"></script>
+<!-- endbuild -->
+
+</body>
+</html>

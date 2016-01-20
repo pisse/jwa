@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>消息通知设置</title>
+    <link rel="stylesheet" type="text/css" href="../css/set.css">
+</head>
+<body>
+	<div class="container mymba">
+    <!-- header/navbar dynamic load -->
+
+    <!--S content -->
+    <div class="content">
+      <ul class="set_notice_list">
+        <li class="set_notice_tin">
+            数据通告
+            <div class="jdui_switch_group_s">
+                <label class="jdui_switch_group_in">
+                    <input type="checkbox" name="switch" checked id="switch-notice"/>
+                    <div class="jdui_switch_wrap">
+                        <span class="jdui_switch_btn"></span>
+                    </div>
+                </label>
+            </div>
+        </li>
+        <li class="set_notice_tin">
+            电商快讯
+            <div class="jdui_switch_group_s">
+                <label class="jdui_switch_group_in">
+                    <input type="checkbox" name="switch" checked id="switch-news"/>
+                    <div class="jdui_switch_wrap">
+                        <span class="jdui_switch_btn"></span>
+                    </div>
+                </label>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <!--E content -->
+  </div>
+	<!-- build:js -->
+    <script src="../js/require-config.js"></script>
+    <script src="../js/lib/require.js" data-main="set"></script>
+	<!-- endbuild -->
+</body>

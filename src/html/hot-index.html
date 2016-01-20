@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>热图首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/hot_index.css">
+</head>
+<body>
+	<div class="container">
+    <!-- header/navbar dynamic load -->
+    <!--S 数据切换 -->
+    <ul class="hot_selector">
+        <li class="cur" id="trans_rate">点击转化率<i class="gou"></i></li>
+        <li id="click_num">点击量<i class="gou"></i></li>
+        <li id="order_num">引入订单比数<i class="gou"></i></li>
+    </ul>
+    <!--E 数据切换 -->
+
+    <!--S content -->
+    <div class="content">
+
+      <!--S 可视化展示模式-->
+      <div class="hot_mode hot_view_mode"></div>
+      <!--E 可视化展示模式-->
+
+      <!--S 数据展示模式-->
+      <div class="hot_mode hot_data_mode hid"></div>
+      <!--E 数据展示模式-->
+      
+
+    </div>
+    <!--E content -->
+  </div>
+	<!-- build:js -->
+    <script src="../js/require-config.js"></script>
+    <script src="../js/lib/require.js" data-main="hot-index"></script>
+	<!-- endbuild -->
+</body>

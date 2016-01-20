@@ -1,0 +1,659 @@
+@import "base";
+@import "chart";
+@import "border";
+@import "../js/module/calendar/index.scss";
+
+//main
+.content{
+  background-color: #343743;
+}
+.mymba .content{
+  padding-right: 2px;
+}
+header .right-btn span{
+  //icon
+  $icon-filter-group: ('icon-filter', $icon-filter, $icon-filter-2x);
+  @include retina-sprite($icon-filter-group);
+}
+//===================== main =====================
+.no-chart{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../img/chart-no.png) no-repeat;
+  background-size: 100%;
+}
+.no-chart:before{
+  content: '';
+  @extend .overlay;
+  display: block;
+}
+.no-chart .info{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  top: 15%;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  z-index: 5;
+  border: 1px solid #485267;
+  background-color: rgba(52, 59, 74, 0.8);
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  //
+  &:before{
+    content: '';
+    display: block;
+    margin: 0 auto 30px;
+    //icon
+    $icon-logo-group: ('icon-logo', $icon-logo, $icon-logo-2x);
+    @include retina-sprite($icon-logo-group);
+  }
+}
+//pop
+.chart-pop .txt{
+  color: #989A9D;
+}
+.s-refresh{
+  font-size: 12px;
+}
+
+//===================== details ==================
+.mymba-details .content{
+  padding: 8px;
+}
+.mymba-details header{
+  z-index: 0;
+}
+//tabbar
+.tabbar{
+  padding-right: 2px;
+  margin-bottom: 10px;
+}
+.tabbar ul{
+  // background-color: #343B4B;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.tabbar ul li{
+  height: 40px;
+  line-height: 40px;
+  width: 33%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #34444E;
+  background-color: #343B4B;
+  &.cur{
+    background-color: #2B86E3;
+  }
+  &:first-child{
+    @include border-left-radius(5px);
+  }
+  &:last-child{
+    border: none;
+    margin-right: -2px;
+    @include border-right-radius(5px);
+  }
+}
+.filter-online{
+  padding-right: 3px;
+}
+.filter-online ul li{
+  width: 25%;
+  &:first-child{
+    display: block;
+  }
+  &:last-child{
+    margin-right: -3px;
+  }
+}
+
+
+//
+.chart-details{
+  
+}
+.chart-details .details-hd{
+  background-color: #343B4B;
+  @include border-top-radius(5px);
+  height: 78px;
+  background-image: url(../img/chart-details-bg.png);
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.chart-details .details-hd ul{
+  padding: 14px 18px;
+}
+.chart-details .details-hd li{
+  float: left;
+  font-size: 12px;
+  margin-right: 10px;
+  // width: 30%;
+  width: auto;
+  &:first-child{
+    float: none;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  &:nth-child(2){
+    // width: 40%;
+  }
+  &.date{
+    width: auto;
+  }
+}
+.chart-details .details-hd .date .time{
+  display: inline-block;
+  margin-right: 10px;
+}
+.chart-details .details-hd .data-up:after,
+.chart-details .details-hd .data-down:after{
+  content: '';
+  display: inline-block;
+  margin-left: 6px;
+  position: relative;
+  top: 1px;
+  //icon
+  $arrow-circle-group: ('icon-arrow-circle', $icon-arrow-circle, $icon-arrow-circle-2x);
+  @include retina-sprite($arrow-circle-group);
+}
+.chart-details .details-hd .data-down:after{
+  //icon
+  $arrow-circle-down: ('icon-arrow-circle-down', $icon-arrow-circle-down, $icon-arrow-circle-down-2x);
+  @include retina-sprite($arrow-circle-down);
+}
+//offline
+.chart-details .offline{
+  position: relative;
+}
+.chart-details .offline li{
+  clear: both;
+  &:nth-child(1), &:nth-child(2){
+    display: block;
+    margin-left: 14%;
+  }
+  &:nth-child(2){
+    margin-top: -5px;
+  }
+  &:nth-child(3), &:nth-child(4){
+    position: absolute;
+    left: 54%;
+    top: 18px;
+  }
+  &:nth-child(4){
+    top: 38px;
+  }
+}
+
+.chart-details .details-bd{
+  margin: 0 4px;
+  position: relative;
+  padding-top: 68%;
+  background-color: #343B4B;
+  @include border-bottom-radius(5px);
+  &:before, &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    //icon
+    $chart-box-arrow-group: ('chart-box-arrow', $chart-box-arrow, $chart-box-arrow-2x);
+    @include retina-sprite($chart-box-arrow-group);
+  }
+  &:before{
+    left: -4px;
+    @include transform(rotate(90deg));
+  }
+  &:after{
+    right: -4px;
+  }
+  .area-multi{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 22px;
+      background: url(../img/chart-bg3.png) no-repeat center bottom;
+      background-size: 100%;
+    }
+  }
+  .area-multi .bd{
+    top: 0;
+  }
+}
+.chart-details-no{
+  text-align: center;
+  line-height: 40px;
+  color: gray;
+}
+
+
+//data
+.chart-data{
+  margin-top: 8px;
+}
+.chart-data h4, .chart-data li{
+  font-weight: normal;
+  height: 30px;
+  line-height: 30px;
+  background-color: #2F3543;
+}
+.chart-data h4{
+  @include border-top-radius(5px);
+}
+.chart-data span{
+  display: inline-block;
+}
+.chart-data .title{
+  width: 45%;
+  padding-left: 10px;
+  border-right: 1px solid #393E4A;
+}
+.chart-data .num{
+  padding-left: 20px;
+}
+.chart-data ul{
+  overflow-y: auto;
+}
+.chart-data li{
+  &:nth-child(2n+1){
+    background-color: #343B4B;
+  }
+  &:nth-child(2n){
+    background-color: #2F3543;
+  }
+  &:nth-last-child(1){
+    @include border-bottom-radius(5px);
+  }
+}
+
+
+//filter-utils
+.btn{
+  height: 21px;
+  line-height: 21px;
+  padding: 0 9px;
+  border: 1px solid #536A7A;
+  border-radius: 5px;
+  color: #536A7A;
+  font-size: 12px;
+  display: inline-block;
+}
+.btn-blue{
+  color: #FFF;
+  border-color: #2B86E3;
+  background-color: #2B86E3;
+}
+
+
+//filter
+.filter{
+  @include transform(translateX(100%));
+  @include transition(all 0.6s ease);
+  z-index: 5;
+  &.show{
+    @include transform(translateX(0));
+  }
+}
+.filter-overlay{
+  z-index: 2;
+}
+.filter, .filter .part{
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  background-color: #343B4B;
+  max-width: 512px;
+}
+.filter .part{
+  width: 100%;
+  // background-color: transparent;
+}
+.filter .part .hd{
+  padding-top: 20px;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #34444E;
+}
+.filter .part .hd .btn{
+  position: absolute;
+  top: 30px;
+}
+.filter .part .hd .btn-cancel{
+  left: 10px;
+}
+.filter .part .hd .btn-submit{
+  right: 10px;
+}
+//bd
+.filter .part .bd{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 66px;
+  overflow-y: auto;
+}
+.filter .part .bd .cate{
+  height: 24px;
+  line-height: 24px;
+  color: #4F6474;
+  background-color: #3E4555;
+  font-size: 12px;
+  padding: 0 14px;
+}
+.filter .part .bd .list-extend{
+  dt, dd{
+    display: block;
+  }
+}
+//vars
+$listSelectedBgColor: #2F4563; 
+//icon
+$icon-filter-select: ('filter-select', $filter-select, $filter-select-2x);
+$icon-filter-selected: ('filter-selected', $filter-selected, $filter-selected-2x);
+//check box
+@mixin filterCheckbox() {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    @include retina-sprite($icon-filter-select);
+}
+//radio box
+@mixin RadioboxBefore() {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  width: 13px !important;
+  height: 13px !important;
+  border: 1px solid #536A7A;
+  border-radius: 7px;
+}
+@mixin RadioboxAfter() {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  width: 7px;
+  height: 7px;
+  background-color: #536A7A;
+  border-radius: 5px;
+}
+@mixin filterRadiobox() {
+  &:before{
+    @include RadioboxBefore;
+  }
+  &:after{
+    @include RadioboxAfter;
+  }
+  &.selected:before{
+    background-color: #2B86E3;
+    border-color: #2B86E3;
+  }
+  &.selected:after{
+    background-color: #FFF;
+  }
+}
+//subtxt
+.filter .part .sublist-txt span{
+  display: block;
+  height: 45px;
+  line-height: 45px;
+}
+.filter .part .sublist-txt .txt{
+  display: block;
+  float: left;
+}
+.filter .part .sublist-txt .subtxt{
+  overflow: hidden;
+  padding: 0 2px;
+}
+.filter .part .sublist-txt .subtxt em{
+  display: block;
+  float: left;
+}
+.filter .part .sublist-txt .subtxt .info{
+  text-overflow: ellipsis; 
+  -webkit-line-clamp: 1;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 2px;
+}
+
+.filter .part .bd .list-extend dt{
+  height: 45px;
+  line-height: 45px;
+  // border-bottom: 1px solid #546a79;
+  // @include borderOne('bottom', red);
+  padding: 0 13px;
+  padding-left: 38px;
+  position: relative;
+  @include transition(background 0.3s ease);
+  @include filterRadiobox;  //radio box
+  &.selected{
+    background-color: $listSelectedBgColor;
+  }
+  &.extend .arrow{
+    @include transform(rotate(135deg));
+    top: 18px;
+  }
+  .line{
+    display: block;
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    @include borderOne('bottom', #546a79);
+  }
+}
+.filter .part .bd .list-extend dt .arrow{
+  display: block;
+  @include arrow(315deg);
+  top: 12px;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  @include transition(all 0.3s ease);
+}
+.filter .part .bd .list-extend dd{
+  display: none;
+  ul{
+    background-color: #2F3543;
+  }
+  li{
+    padding: 0 15px 0 25px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    padding-left: 65px;
+    &:before{
+      @include filterCheckbox;
+      left: 36px;
+    }
+    &.part-selected:before{
+      background-image: none !important;
+      @include RadioboxBefore;
+      left: 36px;
+    }
+    &.part-selected:after{
+      @include RadioboxAfter;
+      left: 40px;
+    }
+    &.selected.part-selected:before{
+      background-image: none !important;
+      background-color: #2B86E3;
+      border-color: #2B86E3;
+    }
+    &.selected.part-selected:after{
+      background-color: #FFF;
+      left: 40px;
+    }
+  }
+  li.selected{
+    background-color: $listSelectedBgColor;
+  }
+  li.selected:before{
+    @include retina-sprite($icon-filter-selected);
+  }
+  li.selected .arrow{
+    // background-color: #2F4563;
+  }
+  .arrow{
+    display: block;
+    width: 50px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // background-color: #2F3543;
+    z-index: 5;
+  }
+  .arrow:before{
+    content: '';
+    display: block;
+    @include arrow(225deg);
+    top: 15px;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+  }
+}
+.filter .part .bd .list-select dt:last-child{
+  border: none;
+}
+.filter .part .bd .list-select-muti li{
+  min-height: 44px;
+  line-height: 44px;
+  padding: 0 13px;
+  position: relative;
+  padding-left: 50px;
+  // border-bottom: 1px solid #546a79;
+  @include borderOne('bottom', #546a79);
+  &:after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    @include retina-sprite($icon-filter-select);
+  }
+  &.selected{
+    background-color: #334969;
+  }
+  &.selected:after{
+    @include retina-sprite($icon-filter-selected);
+  }
+  em{
+    display: block;
+  }
+  .more{
+    line-height: 18px;
+    color: #8294AD;
+    font-size: 12px;
+    word-wrap:break-word;
+    word-break:break-all;
+    margin-top: -8px;
+    padding-bottom: 8px;
+  }
+}
+.filter .part-sub{
+  @include transform(translateX(100%));
+  @include transition(all 0.6s ease);
+  &.show{
+    @include transform(translateX(0));
+  }
+}
+//custom-day
+.custom-day header, .custom-day .tabbar{
+  z-index: 10;
+}
+.custom-day .navbar{
+  z-index: 0;
+}
+.custom-day .tabbar{
+  position: relative;
+}
+.jdui_calendar{
+  z-index: 10;
+}
+.jdui_calendar .jdui_calendar_panel{
+  .date_table .selected, .date_table tbody .now{
+    border-radius: 5px;
+  }
+  .date_table tbody .now{
+    background-color: #2E5E93;
+  }
+}
+.sequent-list .jdui_calendar_panel{
+  .date_table .selected.start{
+    @include border-right-radius(0);
+    @include border-left-radius(5px);
+  }
+  .date_table .selected.end{
+    @include border-left-radius(0);
+    @include border-right-radius(5px);
+  }
+  .date_table .selected{
+    border-radius: 0;  
+  }
+}
+.jdui_calendar .jdui_calendar_bd{
+  -webkit-overflow-scrolling: touch;
+}
+
+//iphone5
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 374px) {
+  //main
+  .chart-item .chart-title .percent .num{
+    margin-right: 4px;
+  }
+  .no-chart .info{
+    font-size: 16px;
+    line-height: 26px;
+  }
+  //details
+  .chart-details .details-hd ul{
+    padding: 14px 6px;
+    font-size: 12px;
+  }
+  .chart-details .details-hd li{
+    width: auto;
+    margin-right: 10px;
+    .num{
+      display: inline-block;
+      margin-right: -1px;
+    }
+    &:nth-child(2){
+      width: auto;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

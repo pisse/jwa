@@ -1,0 +1,119 @@
+@import "base";
+
+.content{
+	padding-top: 10px;
+}
+
+.hot_list{
+	position: relative;
+	line-height: 120%;
+	padding:0 10px;
+	&:first-child{
+		position: static;
+	}
+	.hot_list_tin{
+		position: relative;
+		width: 100%;
+		height: 114px;
+		box-sizing:border-box;
+		padding:3% 7% 0 30%;
+		border-radius: 6px;
+		overflow: hidden;
+		background: #343b4a;
+		margin: 0 0 10px 0;
+		.product{
+			position: absolute;
+			width: 70px;
+			left:5%;
+			top:5%;
+			line-height: 35px;
+			text-align: center;
+			.pic{
+				width: 100%;
+			}
+			.product_name{
+				width: 100%;
+				overflow: hidden;
+				line-height: 20px;
+				font-size: 13px;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+			}
+			p{
+				line-height: 18px;
+			}
+		}
+		.hot_icon{
+			position: absolute;
+			width: 70px;
+			left:5%;
+			top:12%;
+			line-height: 35px;
+			text-align: center;
+			.circle-iocn{
+				width:60%;
+				margin: 8px 0;
+			}
+		}
+		dl{
+			width: 100%;
+			height: 25px;
+    		line-height: 25px;
+    		padding-top: 5px;
+			position: relative;
+			z-index: 1;
+		}
+		dt{
+			display: inline-block;
+			width: 50%;
+			text-align: right;
+		}
+		dd{
+			display: inline-block;
+			width: 45%;
+			padding: 0;
+			margin: 0;
+			text-align: right;
+		}
+	}
+	.ban{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right:0;
+		bottom:0;
+	}
+	.ban:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right:0;
+		bottom:0;
+		@include linear-gradient(left, rgba(0,0,0,0) 7%,rgba(52,59,74,0.88) 46%,rgba(52,59,74,0.9) 47%);
+	}
+	.ban .hot_list_ban{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right:0;
+		bottom:0;
+		z-index: 0;
+	}
+	.ban_title{
+		position: absolute;
+		left:0;
+		top: 0;
+		width: 38%;
+		height: 30px;
+		padding: 0 2% 0 3%;
+		line-height: 30px;
+		background-color: #3288e0;
+		border-radius: 3px 0 0 0;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+}

@@ -1,0 +1,131 @@
+// base scss framework
+@import "bourbon";
+
+
+.jdui_calendar{
+  display:none;
+  position: absolute;
+  max-width: 624px;
+  left: 8px;
+  right: 8px;
+  top: 112px;
+  bottom: 9px;
+  overflow: hidden;
+  background-color: #2F3543;
+  @include border-bottom-radius(5px);
+  //hd
+  .jdui_calendar_hd{
+    display: none;
+    text-align: center;
+    height: 46px;
+    background-color: #E4393C;
+    color: #FFF;
+    line-height: 46px;
+    font-size: 16px;
+    position: relative;
+    .jdui_calendar_close{
+      position: absolute;
+      padding: 0 15px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  //bd
+  .jdui_calendar_bd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    overflow-y: auto;
+    border-top: 1px solid #34444E;
+  }
+
+  //foot
+  .jdui_calendar_foot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 0 10px;
+    span{
+      margin-top: 12px;
+      display: block;
+      float: left;
+      width: 45%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #2B86E3;
+      border-radius: 5px;
+    }
+    span:nth-child(2){
+      float: right;
+    }
+    .jdui_calendar_cancel{
+      color: #536A7A;
+      background-color: #3A3F4D;
+    }
+  }
+  
+  //panel
+  .jdui_calendar_panel{
+    font-size:12px;
+    z-index:10000;
+    .date_hd{
+      position:relative;
+      height:35px;
+      line-height: 35px;
+      font-size: 16px;
+    }
+    .date_txt{
+      color:#FFF;
+      font-size: 15px;
+      text-align:center;
+      .y{padding:0 6px 0 0;}
+      .m{padding:0 6px;}
+    }
+    .date_table{
+      table-layout:fixed;
+      empty-cells:show;
+      text-align:center;
+      z-index:1;
+      width: 100%;
+    }
+    .date_table th, .date_table td{
+      width:24px;
+      height:20px;
+      padding:0;
+      font:12px/20px Arial;
+      text-align:center; 
+      width: 14.285714285714286%;
+      height: 24px;
+      vertical-align: middle;
+      font-size: 12px;
+    }
+    .date_table th{
+      font-size: 14px;
+      height: 30px;
+    }
+    .date_table td{
+      border-bottom: 2px solid #2F3543;
+    }
+    .date_table .disabled{
+      color: #434B5E;
+    }
+    .date_table tbody .sat, .date_table tbody .sun{
+    }
+    .date_table .selected{
+      color: #FFF !important;
+      background: #2B86E3 !important;
+    }
+    .date_table tbody .now{
+      background-color: #2B86E3;
+      // color: #2B86E3;
+      // font-weight: bold;
+    }
+  }
+  // panel end
+}

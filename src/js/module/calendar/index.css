@@ -1,0 +1,18 @@
+.jdui_calendar { display: none; position: absolute; left: 0; right: 0; top: 0; min-height: 100%; background-color: #FFF; }
+.jdui_calendar .jdui_calendar_hd { text-align: center; height: 46px; background-color: #E4393C; color: #FFF; line-height: 46px; font-size: 16px; position: relative; }
+.jdui_calendar .jdui_calendar_hd .jdui_calendar_close { position: absolute; padding: 0 15px; left: 0; top: 0; }
+.jdui_calendar .jdui_calendar_panel { font-size: 12px; background: #fff; z-index: 10000; }
+.jdui_calendar .jdui_calendar_panel .date_hd { position: relative; height: 30px; line-height: 30px; border-bottom: 1px solid #ccc; background-color: #FEE4E4; }
+.jdui_calendar .jdui_calendar_panel .date_txt { color: #333; font-weight: bold; font-size: 15px; text-align: center; }
+.jdui_calendar .jdui_calendar_panel .date_txt .y { padding: 0 6px 0 0; }
+.jdui_calendar .jdui_calendar_panel .date_txt .m { padding: 0 6px; }
+.jdui_calendar .jdui_calendar_panel .date_table { table-layout: fixed; empty-cells: show; text-align: center; z-index: 1; width: 100%; }
+.jdui_calendar .jdui_calendar_panel .date_table th, .jdui_calendar .jdui_calendar_panel .date_table td { width: 24px; height: 20px; padding: 0; font: 12px/20px Arial; text-align: center; width: 14.285714285714286%; border-bottom: 1px solid #ccc; height: 50px; vertical-align: middle; }
+.jdui_calendar .jdui_calendar_panel .date_table th { color: #999; font-size: 15px; }
+.jdui_calendar .jdui_calendar_panel .date_table td { font-size: 17px; font-weight: bold; }
+.jdui_calendar .jdui_calendar_panel .date_table .disabled { color: #999; }
+.jdui_calendar .jdui_calendar_panel .date_table tbody .sat, .jdui_calendar .jdui_calendar_panel .date_table tbody .sun { color: #E4393C; }
+.jdui_calendar .jdui_calendar_panel .date_table tbody .now { background: #FEE4E4; }
+.jdui_calendar .jdui_calendar_panel .date_table .selected { background: #E4393C !important; color: #fff !important; }
+
+/*# sourceMappingURL=index.css.map */

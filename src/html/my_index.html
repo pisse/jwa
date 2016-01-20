@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>我的首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/my.css">
+</head>
+<body>
+	<div class="container mymba">
+    <!-- header/navbar dynamic load -->
+
+    <!--S content -->
+    <div class="content my_index">
+      <ul class="my_nav">
+        <li><a href="help.html">帮助与反馈</a></li>
+        <li><a href="set.html">设置</a></li>
+        <li><a href="about.html">关于移动MBA</a></li>
+      </ul>
+      <ul class="my_tab">
+        <li class="cur">数据通告</li>
+        <li>电商快讯</li>
+      </ul>
+      <div class="my_index_list_wrap">
+          <section class="my_index_list notice_list"><ul data-index='1'></ul></section>
+
+          <section class="my_index_list news_list"><ul data-index='1'></ul></section>
+
+
+
+        </div>
+    </div>
+    <!--E content -->
+  </div>
+	<!-- build:js -->
+    <script src="../js/require-config.js"></script>
+    <script src="../js/lib/require.js" data-main="my_index"></script>
+	<!-- endbuild -->
+</body>

@@ -1,0 +1,205 @@
+{
+  "status": 1,
+  "data": [
+    {
+      "panel_id": "1714",
+      "user_id": "519",
+      "panel_title": "\u6709\u6548\u8ba2\u5355\u6570\u5360\u6bd4",
+      "request_id": "3797,3798",
+      "report_key": "vip__daily_report__effect_order",
+      "date_type": "",
+      "opts_json": "",
+      "data_json": "[{\"chart_name\":\"\\u6709\\u6548\\u8ba2\\u5355\\u6570\\u5360\\u6bd4|\\u6709\\u6548\\u8ba2\\u5355\\u6570|\\u6709\\u6548\\u8ba2\\u5355\\u6570\\u5360\\u6bd4\\uff08\\u4e09\\u5929\\u524d\\uff09,,\\u6708\\u5ea6\\u76ee\\u6807\",\"path\":\"mba.php?g=daily_report&c=daily_report&a=getEffectOrder\",\"data\":\"\",\"filter_field\":\"\",\"field\":\"\",\"chart_type\":\"mix\"},{\"chart_name\":\"15\\u65e5\\u5747\\u503c\",\"path\":\"mba.php?g=daily_report&c=daily_report&a=get15_day_avg_line\",\"data\":\"\",\"filter_field\":\"\",\"field\":\"effect_order\",\"chart_type\":\"column\"}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:34",
+      "create_time": "2016-01-19 10:35:33",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1708",
+      "user_id": "519",
+      "panel_title": "\u6709\u6548\u8ba2\u5355\u91d1\u989d\u5360\u6bd4",
+      "request_id": "3784",
+      "report_key": "vip__daily_report__effect_price",
+      "date_type": "",
+      "opts_json": "",
+      "data_json": "[{\"chart_name\":\"\\u6709\\u6548\\u8ba2\\u5355\\u91d1\\u989d\\u5360\\u6bd4|\\u6709\\u6548\\u8ba2\\u5355\\u91d1\\u989d|\\u6709\\u6548\\u8ba2\\u5355\\u91d1\\u989d\\u5360\\u6bd4\\uff08\\u4e09\\u5929\\u524d\\uff09,\",\"path\":\"mba.php?g=daily_report&c=daily_report&a=getEffectPrice\",\"data\":\"\",\"filter_field\":\"\",\"field\":\"\",\"chart_type\":\"mix\"}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:29",
+      "create_time": "2016-01-19 10:35:28",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1715",
+      "user_id": "519",
+      "panel_title": "APP\u6d3b\u8dc3\u7528\u6237",
+      "request_id": "3799,3800",
+      "report_key": "vip__user_data__app",
+      "date_type": "",
+      "opts_json": "{\"filter_list\":[\"\\u65e0\\u7ebf\\u7c7b\\u578b\\uff1aAPP\\u7248\",\"APP\\u7c7b\\u578b\\uff1a\\u5168\\u90e8\",\"\"],\"report_url\":\"\\\/mba\\\/mba.php?source=de828dda8b2779917605430cb5b27111\"}",
+      "data_json": "[{\"chart_name\":\"APP\\u6d3b\\u8dc3\\u7528\\u6237\",\"path\":\"mba.php?g=mobile_analyse&c=user_data&a=get_high_data\",\"data\":\"report_type=daily&wireless_type=A&app_type=all&version_type=all&type=active\",\"filter_field\":\"\",\"field\":\"active\",\"chart_type\":\"high\",\"is_not_core\":1},{\"chart_name\":\"APP\\u6d3b\\u8dc3\\u7528\\u6237\",\"path\":\"mba.php?g=mobile_analyse&c=user_data&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=A&app_type=all&version_type=all&type=active\",\"filter_field\":\"\",\"field\":\"num\",\"chart_type\":\"line\",\"is_not_core\":1}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:09",
+      "create_time": "2016-01-19 10:35:08",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1713",
+      "user_id": "519",
+      "panel_title": "M\u6d3b\u8dc3\u7528\u6237\u6570",
+      "request_id": "3795,3796",
+      "report_key": "vip__user_data__m",
+      "date_type": "",
+      "opts_json": "{\"filter_list\":[\"\\u65e0\\u7ebf\\u7c7b\\u578b\\uff1aM\\u7248\",\"\",\"\"],\"report_url\":\"\\\/mba\\\/mba.php?source=de828dda8b2779917605430cb5b27111\"}",
+      "data_json": "[{\"chart_name\":\"M\\u6d3b\\u8dc3\\u7528\\u6237\",\"path\":\"mba.php?g=mobile_analyse&c=user_data&a=get_high_data\",\"data\":\"report_type=daily&wireless_type=M&app_type=all&version_type=all&type=active\",\"filter_field\":\"\",\"field\":\"active\",\"chart_type\":\"high\",\"is_not_core\":1},{\"chart_name\":\"M\\u6d3b\\u8dc3\\u7528\\u6237\",\"path\":\"mba.php?g=mobile_analyse&c=user_data&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=M&app_type=all&version_type=all&type=active\",\"filter_field\":\"\",\"field\":\"num\",\"chart_type\":\"line\",\"is_not_core\":1}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:09",
+      "create_time": "2016-01-19 10:35:08",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1712",
+      "user_id": "519",
+      "panel_title": "\u6fc0\u6d3b\u7528\u6237\u6570",
+      "request_id": "3793,3794",
+      "report_key": "vip__wireless_daily__acount",
+      "date_type": "",
+      "opts_json": "{\"filter_list\":[\"\\u91d1\\u989d\\u7b5b\\u9009\\uff1a\\u6392\\u9664\\u767e\\u4e07\\u8ba2\\u5355\",\"\\u65e0\\u7ebf\\u7c7b\\u578b\\uff1a\\u5168\\u90e8\",\"\",\"\"],\"report_url\":\"\\\/mba\\\/mba.php?source=4ca65db64344cae979a67eea80cb2418\"}",
+      "data_json": "[{\"chart_name\":\"\\u6fc0\\u6d3b\\u7528\\u6237\\u6570\",\"path\":\"mba.php?g=mobile_analyse&c=wireless_daily&a=get_high_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&type=acount&price_type=0\",\"filter_field\":\"\",\"field\":\"acount\",\"chart_type\":\"high\",\"is_not_core\":1},{\"chart_name\":\"\\u6fc0\\u6d3b\\u7528\\u6237\\u6570\",\"path\":\"mba.php?g=mobile_analyse&c=wireless_daily&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&type=acount&price_type=0\",\"filter_field\":\"\",\"field\":\"\",\"chart_type\":\"mix\"}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:09",
+      "create_time": "2016-01-19 10:35:08",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1711",
+      "user_id": "519",
+      "panel_title": "\u5f15\u5165\u8ba2\u5355\u6570",
+      "request_id": "3791,3792",
+      "report_key": "vip__wireless_daily__import_order",
+      "date_type": "",
+      "opts_json": "{\"filter_list\":[\"\\u91d1\\u989d\\u7b5b\\u9009\\uff1a\\u6392\\u9664\\u767e\\u4e07\\u8ba2\\u5355\",\"\\u65e0\\u7ebf\\u7c7b\\u578b\\uff1a\\u5168\\u90e8\",\"\",\"\"],\"report_url\":\"\\\/mba\\\/mba.php?source=4ca65db64344cae979a67eea80cb2418\"}",
+      "data_json": "[{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u6570\",\"path\":\"mba.php?g=mobile_analyse&c=wireless_daily&a=get_high_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&type=importOrder&price_type=0\",\"filter_field\":\"\",\"field\":\"importOrder\",\"chart_type\":\"high\",\"is_not_core\":1},{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u6570\",\"path\":\"mba.php?g=mobile_analyse&c=wireless_daily&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&type=importOrder&price_type=0\",\"filter_field\":\"\",\"field\":\"\",\"chart_type\":\"mix\"}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:09",
+      "create_time": "2016-01-19 10:35:08",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1710",
+      "user_id": "519",
+      "panel_title": "\u5f15\u5165\u8ba2\u5355\u91d1\u989d",
+      "request_id": "3789,3790",
+      "report_key": "vip__wireless_daily__import_fee",
+      "date_type": "",
+      "opts_json": "{\"filter_list\":[\"\\u91d1\\u989d\\u7b5b\\u9009\\uff1a\\u6392\\u9664\\u767e\\u4e07\\u8ba2\\u5355\",\"\\u65e0\\u7ebf\\u7c7b\\u578b\\uff1a\\u5168\\u90e8\",\"\",\"\"],\"report_url\":\"\\\/mba\\\/mba.php?source=4ca65db64344cae979a67eea80cb2418\"}",
+      "data_json": "[{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u91d1\\u989d\",\"path\":\"mba.php?g=mobile_analyse&c=wireless_daily&a=get_high_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&type=importPrice&price_type=0\",\"filter_field\":\"\",\"field\":\"importPrice\",\"chart_type\":\"high\",\"is_not_core\":1},{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u91d1\\u989d\",\"path\":\"mba.php?g=mobile_analyse&c=wireless_daily&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&type=importPrice&price_type=0\",\"filter_field\":\"\",\"field\":\"\",\"chart_type\":\"mix\"}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:09",
+      "create_time": "2016-01-19 10:35:08",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    },
+    {
+      "panel_id": "1709",
+      "user_id": "519",
+      "panel_title": "\u5f15\u5165\u8ba2\u5355\u8f6c\u5316\u7387",
+      "request_id": "3785,3786,3787,3788",
+      "report_key": "vip__kpi_statistics__order_rate",
+      "date_type": "",
+      "opts_json": "{\"filter_list\":[\"\\u65e0\\u7ebf\\u7c7b\\u578b\\uff1a\\u5168\\u90e8\",\"\",\"\"],\"report_url\":\"\\\/mba\\\/mba.php?source=80c6a042d3150a3e5910b6f7ef3b371b\"}",
+      "data_json": "[{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u8f6c\\u5316\\u7387\",\"path\":\"mba.php?g=kpi_statistics&c=kpi_statistics&a=get_high_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&kpi_type=app_all&kpi_index=app_order_rate\",\"filter_field\":\"\",\"field\":\"app_order_rate\",\"chart_type\":\"high\",\"is_not_core\":1},{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u8f6c\\u5316\\u7387\",\"path\":\"mba.php?g=kpi_statistics&c=kpi_statistics&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&kpi_type=app_all&kpi_index=app_order_rate\",\"filter_field\":\"app_order_rate\",\"field\":\"value\",\"chart_type\":\"line\",\"is_not_core\":1},{\"chart_name\":\"\\u5f15\\u5165\\u8ba2\\u5355\\u6570\",\"path\":\"mba.php?g=kpi_statistics&c=kpi_statistics&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&kpi_type=app_all&kpi_index=app_order_rate\",\"filter_field\":\"app_order_rate\",\"field\":\"fenzi\",\"chart_type\":\"column\"},{\"chart_name\":\"\\u6d3b\\u8dc3\\u8ba2\\u5355\\u6570\",\"path\":\"mba.php?g=kpi_statistics&c=kpi_statistics&a=get_line_data\",\"data\":\"report_type=daily&wireless_type=ALL&app_type=all&version_type=all&kpi_type=app_all&kpi_index=app_order_rate\",\"filter_field\":\"app_order_rate\",\"field\":\"fenmu\",\"chart_type\":\"column\"}]",
+      "type": "1",
+      "position": "0",
+      "top_time": "2016-01-19 10:35:09",
+      "create_time": "2016-01-19 10:35:08",
+      "config": {
+        "option": {
+          "is_date_required": 1
+        },
+        "date": {
+          "field": [
+            "start_date",
+            "end_date"
+          ]
+        }
+      }
+    }
+  ]
+}

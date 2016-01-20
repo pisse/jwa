@@ -1,0 +1,448 @@
+//base file
+@import "normalize";
+@import "bourbon";
+@import "sprite/icons";
+
+//reset
+h1, h2, h3, h4, h5, h6, html, body, p, ul, li, dl, dt, dd{
+  padding: 0;
+  margin: 0;
+}
+img{
+  vertical-align: top;
+}
+ul li{
+  list-style: none;
+}
+em{
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(201, 224, 253, 0);
+}
+//utils
+@mixin arrow-item($angle) {
+  display: block;
+  position: absolute; 
+  top: 12px;
+  width: 10px; 
+  height: 10px;
+  border: 1px #FFF solid;
+  border-width: 0 0 2px 2px; 
+  @include transform(rotate($angle));
+}
+@mixin arrow($angle) {
+  @include arrow-item($angle);
+  right: 10px;
+}
+@mixin arrow-left($angle) {
+  @include arrow-item($angle);
+  left: 10px;
+}
+
+
+//================================= main ==================================
+body, html{
+  height: 100%;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, DroidSansFallback, HeiTi SC, Arial, sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #2E333D;
+}
+a{
+  color: #FFF;
+}
+
+
+.container{
+  height: 100%;
+  position: relative;
+  background-color: #2E333D;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+//header
+header{
+  height: 45px;
+  line-height: 45px;
+  padding-top: 20px;
+  background-color: #343b4a;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+header h1{
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+}
+header a{
+  position: absolute;
+  top: 20px;
+  display: block;
+  height: 45px;
+  width: 50px;
+  span{
+    display: block;
+    position: absolute;
+    top: 12px;
+  }
+}
+header .left-btn{
+  left: 0;
+  span{
+    //icon
+    $icon-head-arrow: ('head-arrow', $head-arrow, $head-arrow-2x);
+    @include retina-sprite($icon-head-arrow);
+    left: 10px;
+  }
+}
+header .right-btn{
+  right: 0;
+  span{
+    //icon
+    $icon-head-more: ('head-more', $head-more, $head-more-2x);
+    @include retina-sprite($icon-head-more);
+    right: 13px;
+  }
+}
+
+
+//navbar
+.navbar{
+  height: 49px;
+  line-height: 30px;
+  border-top: 1px solid #3B4150;
+  background-color: #343B4B;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.navbar a{
+  display: block;
+  float: left;
+  width: 25%;
+  height: 49px;
+  text-align: center;
+  text-decoration: none;
+  color: #BABABA;
+  font-size: 12px;
+  &.cur{
+    color: #FFF;
+  }
+  &:before{
+    content: '';
+    display: block;
+    margin: 6px auto -2px;
+    //icon
+    //$icon-nav-mba: ('nav-mba', $nav-mba, $nav-mba-2x);
+    @include retina-sprite($nav-mba-group);
+  }
+  &:nth-child(2):before{
+    //icon
+    $icon-nav-heatmap: ('nav-heatmap', $nav-heatmap, $nav-heatmap-2x);
+    @include retina-sprite($icon-nav-heatmap);
+    margin-top: 2px;
+    margin-bottom: -5px;
+  }
+  &:nth-child(3):before{
+    //icon
+    $icon-nav-kpi: ('nav-kpi', $nav-kpi, $nav-kpi-2x);
+    @include retina-sprite($icon-nav-kpi);
+    margin-top: 3px;
+    margin-bottom: -4px;
+  }
+  &:nth-child(4):before{
+    //icon
+    $icon-nav-user: ('nav-user', $nav-user, $nav-user-2x);
+    @include retina-sprite($icon-nav-user);
+    margin-top: 2px;
+    margin-bottom: -6px;
+  }
+  //cur
+  &:nth-child(1).cur:before{
+    //icon
+    $icon-nav-mba-on: ('nav-mba-on', $nav-mba-on, $nav-mba-on-2x);
+    @include retina-sprite($icon-nav-mba-on);
+  }
+  &:nth-child(2).cur:before{
+    //icon
+    $icon-nav-heatmap-on: ('nav-heatmap-on', $nav-heatmap-on, $nav-heatmap-on-2x);
+    @include retina-sprite($icon-nav-heatmap-on);
+  }
+  &:nth-child(3).cur:before{
+    //icon
+    $icon-nav-kpi-on: ('nav-kpi-on', $nav-kpi-on, $nav-kpi-on-2x);
+    @include retina-sprite($icon-nav-kpi-on);
+  }
+  &:nth-child(4).cur:before{
+    //icon
+    $icon-nav-user-on: ('nav-user-on', $nav-user-on, $nav-user-on-2x);
+    @include retina-sprite($icon-nav-user-on);
+  }
+  &.has-news::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top:3px;
+    right:7%;
+    background: #F64356;
+    border-radius: 100%;
+  }
+  &.cur.has-news::after{
+    width: 0;
+    height: 0;
+  }
+}
+
+
+.navbar .cur{
+  background-color: #F64356;
+}
+
+//content
+.content{
+  position: absolute;
+  top: 64px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+//other
+.show{
+  display: block !important;
+}
+.hide{
+  display: none !important;
+}
+
+
+//pop
+.db-pop{
+  opacity: 0;
+  transition:opacity 1s;
+  position: absolute;
+  left:50%;
+  @include calc(top,"50% - 50px");
+  width: 95%;
+  padding-bottom: 15px;
+  text-align: center;
+  @include transform(translate(-50%,-50%));
+  background-color: #343b4a;
+  box-shadow: 0 0 1px #FFF;
+  z-index: 1;
+  .pop-con{
+    padding: 10px 0 15px 0;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    .pop-con-title{
+      height: 38px;
+      line-height: 25px;
+    } 
+  }
+  .cancel{
+    display: inline-block;
+    width:35%;
+    height: 35px;
+    line-height: 35px;
+    background: #3e4553;
+    border-radius: 5px;
+    color:#546a79;
+  }
+  .confirm{
+    display: inline-block;
+    width:35%;
+    height: 35px;
+    line-height: 35px;
+    background: #3288e0;
+    border-radius: 5px;
+  }
+  .pop_btn{
+    display: inline-block;
+    width:95%;
+    .cancel{
+      width: 45%;
+      float: left;
+    }
+    .confirm{
+      width: 45%;
+      float: right;
+    }
+  }
+}
+
+.overlay{
+  display: none;
+  position: absolute;
+  left: 0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+//loading-pop
+.loading-pop{
+    width:50%;
+    height: 80px;
+    background: #343b4a;
+    position: absolute;
+    @include calc(top,"50% - 50px");
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    padding: 50px 0 40px 0;
+    z-index: 1;
+    .spinner {
+      width: 70px;
+      height: 70px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      
+    }
+     
+    .dot1, .dot2 {
+      width: 30%;
+      height: 30%;
+      position: relative;
+      display: inline-block;
+      background-color: #3262d4;
+      border-radius: 100%;      
+    }
+
+    .dot1{
+      transform:translateX(-90%);
+      animation: d1 2s infinite linear both;
+      @include animation(d1 2s infinite linear both);
+    }
+     
+    .dot2 {
+      transform:translateX(110%);
+      margin-left: -50%;
+      background-color: #f3465a;
+      animation: d2 2s infinite linear both;
+      @include animation(d2 2s infinite linear both);
+    }
+
+    .txt{
+      margin-top: -30px;
+      color: #FFF;
+    }
+//小号的加载动画
+    &.s-loading{
+      height: 60px;
+      background:transparent;
+      padding: 0;
+      @include transform(translate(-50%, 50%));
+    }
+    &.s-loading-list{
+      height: 60px;
+      background:transparent;
+      padding: 0;
+      top: 0;
+      transform: translate(-50%,0);
+    }
+}
+
+.end-data{
+  height: 35px;
+  line-height: 30px;
+  text-align: center;
+}
+
+//ajax error and refresh
+.refresh-pop{
+    position: absolute;
+    top: 30%;
+    left:50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    font-size: 16px;
+    text-align: center;
+    color: #929396;
+    z-index: 1;
+    &::before{
+        content: '';
+        display: inline-block;
+        margin: 20px auto;
+        width: 63px;
+        height: 53px;
+        background: url(../img/sprite/refresh@2x.png) left top no-repeat;
+    }
+//小号的加载失败提示
+    &.s-refresh{
+      width: 150px;
+      height: 100px;
+      margin-left: -75px;
+      &::before{
+        width: 32px;
+        height: 27px;
+        margin: 10px auto;
+        background-size: 100% auto;
+      }
+    }
+}
+
+
+          
+@include keyframes(d1) {
+  0%{
+    z-index:1;
+    @include transform(translateX(-90%));
+  }
+  49%{
+    z-index:1;
+  }
+  50%{
+    z-index:2;
+    @include transform(translateX(10%));
+  }
+  99%{
+    z-index: 2
+  }
+  100%{
+    z-index:1;
+    @include transform(translateX(-90%));
+  }
+}
+
+@include keyframes(d2) {
+  0%{
+    z-index:2;
+    @include transform(translateX(110%));
+  }
+  49%{
+    z-index:2;
+  }
+  50%{
+    z-index:1;
+    @include transform(translateX(-50%));
+  }
+  99%{
+    z-index:1;
+  }
+  100%{
+    z-index:2;
+    @include transform(translateX(110%));
+  }
+}
